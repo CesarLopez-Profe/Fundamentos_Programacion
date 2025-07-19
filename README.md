@@ -25,6 +25,8 @@ Cabe aclarar que esta tabla resume brevemente el contenido de cada documento, pa
 
 ## Sitios web recomendados para la materia
 
+  • [Diagramas de Flujo & Pseudocódigo](https://www.flowgorithm.org/)
+  
   • [W3school - Turorial de Lenguaje C y otros lenguajes](https://www.w3schools.com/c/index.php)
 
   • [Kattis - Enunciados de retos para programación](https://open.kattis.com/problem-sources?order=avg_difficulty_data)
