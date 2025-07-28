@@ -20,8 +20,14 @@ Cabe aclarar que esta tabla resume brevemente el contenido de cada documento, pa
 
   • [Sistemas Numéricos](Slides/2_Representacion&Conversiones.pptx)
 
-  • [Aritmética Binaria](Slides/3_Aritmetica_del_computador.pptx)  
+  • [Aritmética Binaria](Slides/3_Aritmetica_del_computador.pptx)
 
+  • [Introducción a la Programación](Slides/4_Introduccion_a_la_prorgamacion.pptx) 
+
+
+## Talleres y Ejercicios
+
+• [Taller Básico Algoritmos](Talleres/TallerS1_Basico_Algoritmos.docx)
 
 ## Sitios web recomendados para la materia
 
