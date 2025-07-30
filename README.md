@@ -25,9 +25,14 @@ Cabe aclarar que esta tabla resume brevemente el contenido de cada documento, pa
   • [Introducción a la Programación](Slides/4_Introduccion_a_la_prorgamacion.pptx) 
 
 
+## Diagramas de Flujo en Clase
+
+• [Diagramas de Flujo Hechos en Clase](Talleres/TallerS1_Basico_Algoritmos.docx)
+
+
 ## Talleres y Ejercicios
 
-• [Taller Básico Algoritmos](Talleres/TallerS1_Basico_Algoritmos.docx)
+• [Taller Básico Algoritmos](Diagramas/)
 
 ## Sitios web recomendados para la materia
 

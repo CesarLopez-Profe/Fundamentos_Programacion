@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="conversion_velocidades"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-30 07:12:13 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wNy0zMDswNjo1NTozOCBhLuKAr20uOzEwODk3"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wNy0zMDswNzoxMjoxMyBhLuKAr20uOzE7MTA5OTI="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="velkmxs, velmxs, velmxh" type="Real" array="False" size=""/>
+            <assign variable="velkmxs" expression="0"/>
+            <assign variable="velmxs" expression="0"/>
+            <assign variable="velmxh" expression="0"/>
+            <output expression="&quot;Ingrese la velocidad en kil&#243;metros por segundo&quot;" newline="True"/>
+            <input variable="velkmxs"/>
+            <assign variable="velmxs" expression="velkmxs*1000"/>
+            <assign variable="velmxh" expression="velkmxs*1000*3600"/>
+            <output expression="&quot;La velocidad equivalente en metros por segundo es : &quot;" newline="False"/>
+            <output expression="velmxs" newline="True"/>
+            <output expression="&quot;La velocidad equivalente en Metros por hora es: &quot;" newline="False"/>
+            <output expression="velmxh" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>

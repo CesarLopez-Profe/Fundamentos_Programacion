@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cc_litros"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-07-30 06:53:02 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wNy0zMDswNjoyNTozOCBhLuKAr20uOzEwODk0"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wNy0zMDswNjo1MzowMiBhLuKAr20uOzI7MTA5OTU="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantlitros, cantcc" type="Real" array="False" size=""/>
+            <assign variable="cantcc" expression="0"/>
+            <assign variable="cantlitros" expression="0"/>
+            <output expression="&quot;Ingresar la cantidad en CC&quot;" newline="True"/>
+            <input variable="cantcc"/>
+            <assign variable="cantlitros" expression="cantcc/1000"/>
+            <output expression="&quot;La cantidad de Litros equivalente es: &quot;" newline="True"/>
+            <output expression="cantlitros" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
