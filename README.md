@@ -42,4 +42,8 @@ Cabe aclarar que esta tabla resume brevemente el contenido de cada documento, pa
 
   • [Kattis - Enunciados de retos para programación](https://open.kattis.com/problem-sources?order=avg_difficulty_data)
 
+  • [Instalación Compilador C Windows](https://www.youtube.com/watch?v=GEZLjRSY_m8&ab_channel=CharlyCimino)
+
+  • [Instalación Complementos VisualStudioCode](https://www.youtube.com/watch?v=K8ATqLVFfpo&ab_channel=CharlyCimino)
+
 
