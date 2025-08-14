@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="restaurante_1"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-14 06:32:47 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0xNDswNjoxOTozNyBhLuKAr20uOzEwODk5"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0xNDswNjozMjo0NyBhLuKAr20uOzE7MTEwMDM="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="seleccion" type="Integer" array="False" size=""/>
+            <assign variable="seleccion" expression="0"/>
+            <output expression="&quot;Seleccione Su entrada: &quot; &amp;&#13;&#10;&quot;1. Ceviche&quot; &amp;&#13;&#10;&quot;2. Crema&quot; &amp;&#13;&#10;&quot;3. Patacones&quot;" newline="True"/>
+            <input variable="seleccion"/>
+            <if expression="seleccion &gt;= 1 &amp;&amp; seleccion &lt;= 3">
+                <then>
+                    <if expression="seleccion = 1">
+                        <then>
+                            <output expression="&quot;Seleccion&#243; como Entrada Ceviche&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="seleccion = 2">
+                                <then>
+                                    <output expression="&quot;Seleccion&#243; como Entrada Crema&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <output expression="&quot;Seleccion&#243; como Entrada Patacones&quot;" newline="True"/>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;La selecci&#243;n de la entrada no fue v&#225;lida&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>

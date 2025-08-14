@@ -1,0 +1,65 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="desc_matriculas"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-14 07:34:05 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0xNDswNzoxMzoxNiBhLuKAr20uOzEwODkx"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0xNDswNzoyMjo1NCBhLuKAr20uOzE7QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0xNDswNjoxOTozNyBhLuKAr20uOzIxOTU5"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0xNDswNzozNDowNSBhLuKAr20uOzI7MTEwMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="notaprom" type="Real" array="False" size=""/>
+            <declare name="ptoslabsoc" type="Integer" array="False" size=""/>
+            <declare name="vacompleto" type="Boolean" array="False" size=""/>
+            <assign variable="notaprom" expression="0"/>
+            <assign variable="ptoslabsoc" expression="0"/>
+            <assign variable="vacompleto" expression="false"/>
+            <output expression="&quot;Ingrese la nota promedio&quot;" newline="True"/>
+            <input variable="notaprom"/>
+            <output expression="&quot;Ingrese los puntos de Labor Social&quot;" newline="True"/>
+            <input variable="ptoslabsoc"/>
+            <output expression="&quot;Ingrese si va completo o no &quot;" newline="True"/>
+            <input variable="vacompleto"/>
+            <if expression="notaprom &gt;=0 &amp;&amp; notaprom&lt;=5 &amp;&amp; ptoslabsoc &gt; 0">
+                <then>
+                    <if expression="notaprom &gt;= 4.7 &amp;&amp; vacompleto = true &amp;&amp; ptoslabsoc &gt;50">
+                        <then>
+                            <output expression="&quot;Descuento en matricula del 100%&quot;" newline="True"/>
+                        </then>
+                        <else>
+                            <if expression="notaprom &gt;= 4.5 &amp;&amp; notaprom &lt;= 4.7 &amp;&amp; vacompleto = true &amp;&amp; ptoslabsoc &gt;50">
+                                <then>
+                                    <output expression="&quot;Descuento en matricula del 85%&quot;" newline="True"/>
+                                </then>
+                                <else>
+                                    <if expression="notaprom &gt;= 4.7 &amp;&amp; vacompleto = true &amp;&amp; ptoslabsoc &gt;=40 &amp;&amp; ptoslabsoc &lt; 50">
+                                        <then>
+                                            <output expression="&quot;Descuento en matricula del 80%&quot;" newline="True"/>
+                                        </then>
+                                        <else>
+                                            <if expression="notaprom &gt;= 4.5 &amp;&amp; notaprom &lt; 4.7 &amp;&amp; vacompleto = true &amp;&amp; ptoslabsoc &gt;=40 &amp;&amp; ptoslabsoc &lt; 50">
+                                                <then>
+                                                    <output expression="&quot;Descuento en matricula del 50%&quot;" newline="True"/>
+                                                </then>
+                                                <else>
+                                                    <output expression="&quot;No tiene descuento en matricula&quot;" newline="True"/>
+                                                </else>
+                                            </if>
+                                        </else>
+                                    </if>
+                                </else>
+                            </if>
+                        </else>
+                    </if>
+                </then>
+                <else>
+                    <output expression="&quot;Revise los datos, no son v&#225;lidos&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
