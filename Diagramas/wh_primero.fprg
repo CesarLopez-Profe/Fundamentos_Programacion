@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="primer_while"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-26 06:11:35 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0yNjswNjowNTo1NyBhLuKAr20uOzEwODk5"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0yNjswNjoxMTozNSBhLuKAr20uOzI7MTEwMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantvueltas" type="Integer" array="False" size=""/>
+            <assign variable="cantvueltas" expression="1"/>
+            <while expression="cantvueltas &lt;= 10">
+                <output expression="&quot;Voy en la vuelta &quot; &amp; cantvueltas" newline="True"/>
+                <assign variable="cantvueltas" expression="cantvueltas + 1"/>
+            </while>
+        </body>
+    </function>
+</flowgorithm>

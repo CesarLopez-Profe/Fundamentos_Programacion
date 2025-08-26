@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="while_raiz_cuad"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-08-26 06:29:23 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0yNjswNjoxMzozNyBhLuKAr20uOzEwODk2"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOC0yNjswNjoyOToyMyBhLuKAr20uOzM7MTEwMDg="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="nrousr" type="Integer" array="False" size=""/>
+            <declare name="raizcuad" type="Real" array="False" size=""/>
+            <assign variable="raizcuad" expression="0"/>
+            <output expression="&quot;Digite un n&#250;mero para hallar la ra&#237;z cuadrada. Digite  0 o negativo para terminar&quot;" newline="True"/>
+            <input variable="nrousr"/>
+            <while expression="nrousr &gt; 0">
+                <assign variable="raizcuad" expression="Sqrt(nrousr)"/>
+                <output expression="&quot;La ra&#237;z cuadrada de &quot; &amp; nrousr &amp; &quot; es &quot; &amp; raizcuad" newline="True"/>
+                <output expression="&quot;Digite un n&#250;mero para hallar la ra&#237;z cuadrada. Digite  0 o negativo para terminar&quot;" newline="True"/>
+                <input variable="nrousr"/>
+            </while>
+            <output expression="&quot;Finaliz&#243;&quot;" newline="True"/>
+        </body>
+    </function>
+</flowgorithm>
