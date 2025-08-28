@@ -6,7 +6,7 @@ int main(int argc, char const *argv[]){
     int nrousr;
     float raizcuad = 0;
 
-    printf("Digite el numero para hallar la raiz cuadrada. \n Digite cero o negativo para terminar\n");
+    printf("Digite el numero para hallar la raiz cuadrada.\n Digite cero o negativo para terminar\n");
     scanf("%d",&nrousr);
 
     while(nrousr >0){
