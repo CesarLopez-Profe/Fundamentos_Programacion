@@ -1,0 +1,74 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cajero_elec"/>
+        <attribute name="authors" value="B09S202est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2025-09-03 07:31:14 a.&#8239;m."/>
+        <attribute name="created" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOS0wMzswNjozMjowOCBhLuKAr20uOzEwODkx"/>
+        <attribute name="edited" value="QjA5UzIwMmVzdDtOMDAwMjU4Nzk7MjAyNS0wOS0wMzswNzozMToxNCBhLuKAr20uOzY7MTEwMDE="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantretirar, cantorigret, cantb100, cantb50, cantb20, cantb10, saldocajero" type="Integer" array="False" size=""/>
+            <assign variable="cantb100" expression="500"/>
+            <assign variable="cantb50" expression="600"/>
+            <assign variable="cantb20" expression="600"/>
+            <assign variable="cantb10" expression="700"/>
+            <assign variable="saldocajero" expression="cantb100*100000+cantb50*50000+cantb20*20000+cantb10*10000"/>
+            <output expression="&quot;Ingrese el monto a retirar&quot;" newline="True"/>
+            <input variable="cantretirar"/>
+            <assign variable="cantorigret" expression="cantretirar"/>
+            <if expression="cantretirar%10000 == 0 &amp;&amp; saldocajero &gt;= cantretirar &amp;&amp; cantretirar &gt;=20000 &amp;&amp; cantretirar &lt;=2000000">
+                <then>
+                    <comment text="contar los billetes entregados"/>
+                    <comment text="cambiar esta condici&#243;n"/>
+                    <while expression="cantretirar&gt;0">
+                        <if expression="cantretirar &gt;= 100000 &amp;&amp; cantb100 != 0">
+                            <then>
+                                <assign variable="cantb100" expression="cantb100 - 1"/>
+                                <assign variable="cantretirar" expression="cantretirar - 100000"/>
+                                <assign variable="saldocajero" expression="saldocajero - 100000"/>
+                            </then>
+                            <else>
+                                <if expression="cantretirar &gt;= 50000 &amp;&amp; cantb50 != 0">
+                                    <then>
+                                        <assign variable="cantb50" expression="cantb50 - 1"/>
+                                        <assign variable="cantretirar" expression="cantretirar - 50000"/>
+                                        <assign variable="saldocajero" expression="saldocajero - 50000"/>
+                                    </then>
+                                    <else>
+                                        <if expression="cantretirar &gt;= 20000 &amp;&amp; cantb20 != 0">
+                                            <then>
+                                                <assign variable="cantb20" expression="cantb20 - 1"/>
+                                                <assign variable="cantretirar" expression="cantretirar - 20000"/>
+                                                <assign variable="saldocajero" expression="saldocajero - 20000"/>
+                                            </then>
+                                            <else>
+                                                <if expression="cantretirar &gt;= 10000 &amp;&amp; cantb10 != 0">
+                                                    <then>
+                                                        <assign variable="cantb10" expression="cantb10 - 1"/>
+                                                        <assign variable="cantretirar" expression="cantretirar - 10000"/>
+                                                        <assign variable="saldocajero" expression="saldocajero - 10000"/>
+                                                    </then>
+                                                    <else>
+                                                        <comment text="Devolver la transacci&#243;n... "/>
+                                                        <comment text="booleano de la condicion del ciclo == falso"/>
+                                                    </else>
+                                                </if>
+                                            </else>
+                                        </if>
+                                    </else>
+                                </if>
+                            </else>
+                        </if>
+                    </while>
+                </then>
+                <else>
+                    <output expression="&quot;No se puede entregar la cantidad solicitada&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
