@@ -1,0 +1,124 @@
+<?xml version="1.0"?>
+<flowgorithm fileversion="4.2">
+    <attributes>
+        <attribute name="name" value="cajero_ifs"/>
+        <attribute name="authors" value="B09S320est"/>
+        <attribute name="about" value=""/>
+        <attribute name="saved" value="2026-03-12 03:19:38 p.&#8239;m."/>
+        <attribute name="created" value="QjA5UzMyMGVzdDtOMDAwMjkwNzk7MjAyNi0wMy0xMjswMjozNjo1NCBwLuKAr20uOzEwODk5"/>
+        <attribute name="edited" value="QjA5UzMyMGVzdDtOMDAwMjkwNzk7MjAyNi0wMy0xMjswMzoxOTozOCBwLuKAr20uOzY7MTEwMTY="/>
+    </attributes>
+    <function name="Main" type="None" variable="">
+        <parameters/>
+        <body>
+            <declare name="cantretirar, cajab50, cajab20, cajab10, cantb50, cantb20, cantb10, saldocajero, faltante" type="Integer" array="False" size=""/>
+            <assign variable="cajab50" expression="12"/>
+            <assign variable="cajab20" expression="40"/>
+            <assign variable="cajab10" expression="30"/>
+            <assign variable="cantb50" expression="0"/>
+            <assign variable="cantb20" expression="0"/>
+            <assign variable="cantb10" expression="0"/>
+            <assign variable="saldocajero" expression="cajab50*50000+cajab20*20000+cajab10*10000"/>
+            <output expression="&quot;Ingrese el monto a retirar: &quot;" newline="True"/>
+            <input variable="cantretirar"/>
+            <assign variable="faltante" expression="cantretirar"/>
+            <if expression="cantretirar%10000 == 0 &amp;&amp; saldocajero &gt;= cantretirar &amp;&amp; cantretirar &gt;= 20000 &amp;&amp; cantretirar &lt;=1200000">
+                <then>
+                    <if expression="cantretirar &gt;= 50000">
+                        <then>
+                            <assign variable="cantb50" expression="cantretirar/50000"/>
+                            <if expression="cajab50 &gt;= cantb50">
+                                <then>
+                                    <assign variable="cajab50" expression="cajab50-cantb50"/>
+                                    <assign variable="faltante" expression="cantretirar - cantb50*50000"/>
+                                </then>
+                                <else>
+                                    <assign variable="faltante" expression="cantretirar-cajab50*50000"/>
+                                    <assign variable="cantb50" expression="cajab50"/>
+                                    <assign variable="cajab50" expression="0"/>
+                                </else>
+                            </if>
+                            <if expression="faltante &gt;= 20000">
+                                <then>
+                                    <assign variable="cantb20" expression="faltante/20000"/>
+                                    <if expression="cajab20 &gt;= cantb20">
+                                        <then>
+                                            <assign variable="cajab20" expression="cajab20-cantb20"/>
+                                            <assign variable="faltante" expression="faltante - cantb20*20000"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="faltante" expression="cantretirar-cajab20*20000"/>
+                                            <assign variable="cantb20" expression="cajab20"/>
+                                            <assign variable="cajab20" expression="0"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                            <if expression="faltante &gt;= 10000">
+                                <then>
+                                    <assign variable="cantb10" expression="faltante/10000"/>
+                                    <if expression="cajab10 &gt;= cantb10">
+                                        <then>
+                                            <assign variable="cajab10" expression="cajab10-cantb10"/>
+                                            <assign variable="faltante" expression="faltante - cantb10*10000"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="faltante" expression="cantretirar-cajab10*10000"/>
+                                            <assign variable="cantb10" expression="cajab10"/>
+                                            <assign variable="cajab10" expression="0"/>
+                                        </else>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </then>
+                        <else>
+                            <if expression="cantretirar &gt;= 20000">
+                                <then>
+                                    <assign variable="cantb20" expression="cantretirar/20000"/>
+                                    <if expression="cajab20 &gt;= cantb20">
+                                        <then>
+                                            <assign variable="cajab20" expression="cajab20-cantb20"/>
+                                            <assign variable="faltante" expression="faltante - cantb20*20000"/>
+                                        </then>
+                                        <else>
+                                            <assign variable="faltante" expression="cantretirar-cajab20*20000"/>
+                                            <assign variable="cantb20" expression="cajab20"/>
+                                            <assign variable="cajab20" expression="0"/>
+                                        </else>
+                                    </if>
+                                    <if expression="faltante &gt;= 10000">
+                                        <then>
+                                            <assign variable="cantb10" expression="faltante/10000"/>
+                                            <if expression="cajab10 &gt;= cantb10">
+                                                <then>
+                                                    <assign variable="cajab10" expression="cajab10-cantb10"/>
+                                                    <assign variable="faltante" expression="faltante - cantb10*10000"/>
+                                                </then>
+                                                <else>
+                                                    <assign variable="faltante" expression="cantretirar-cajab10*10000"/>
+                                                    <assign variable="cantb10" expression="cajab10"/>
+                                                    <assign variable="cajab10" expression="0"/>
+                                                </else>
+                                            </if>
+                                        </then>
+                                        <else/>
+                                    </if>
+                                </then>
+                                <else/>
+                            </if>
+                        </else>
+                    </if>
+                    <output expression="&quot;Valor Entregado &quot; &amp; cantretirar" newline="True"/>
+                    <output expression="&quot;Cantidad de billetes de 50.000 entregados &quot; &amp; cantb50" newline="True"/>
+                    <output expression="&quot;Cantidad de billetes de 20.000 entregados &quot; &amp; cantb20" newline="True"/>
+                    <output expression="&quot;Cantidad de billetes de 10.000 entregados &quot; &amp; cantb10" newline="True"/>
+                </then>
+                <else>
+                    <output expression="&quot;No se puede entregar la cantidad solicitada&quot;" newline="True"/>
+                </else>
+            </if>
+        </body>
+    </function>
+</flowgorithm>
